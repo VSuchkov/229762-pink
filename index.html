@@ -7,6 +7,7 @@
   </head>
   <body>
     <header class="page-header">
+      <div class="page-header__wrapper">
         <nav class="main-nav main-nav--closed main-nav--no-js">
           <div class="main-nav__logo">
             <a>
@@ -43,9 +44,7 @@
         </nav>
         <div class="page-header__hand-img">
         </div>
-    </header>
-    <main>
-      <div class="desc-block">
+        <div class="desc-block">
         <button class="btn desc-block__btn">
           Скачать приложение
         </button>
@@ -61,57 +60,71 @@
           Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8
         </p>
       </div>
+      </div>
+      
+    </header>
+    <main>
+      
       <div class="slogan">
         <b class="slogan__text">
           Устали от серости мегаполиса?
         </b>
         <b class="slogan__text">
-          Нам есть что вас предложить!
+          Нам есть что вам предложить!
         </b>
       </div>
       <div class="features">
-        <div class="features__img-block">
-          <img src="#">
-          <img src="#">
-          <img src="#">
+        <div class="features__wrapper">
+          <div class="features__img-block">
+            <img src="#">
+            <img src="#">
+            <img src="#">
+          </div>
+          <div class="features__items">
+            <div class="features__item">
+              <h2 class="features__item-title">
+                Поднимает настроение
+              </h2>
+              <p class="features__item-text">
+                Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!
+              </p>
+            </div>
+            <div class="features__item">
+              <h2 class="features-item__title">
+                Меняет мир вокруг
+              </h2>
+              <p class="features__item-text">
+                Сделайте снимок и украсте его смайликом или текстовой подписью, чтобы услить эффект.
+              </p>
+            </div>
+            <div class="features-item">
+              <h2 class="features__item-title">
+                Заводит новых друзей
+              </h2>
+              <p class="features__item-text">
+                Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых.
+              </p>
+            </div>
+          </div>
+          
         </div>
-        <div class="features__items">
-          <div class="features__item">
-            <h2 class="features__item-title">
-              Поднимает настроение
+      </div>
+      <div class="effect">
+        <div class="effect__wrapper">
+          <img src="../img/icon-timer.svg">
+          <div class="effect__text-block">
+            <h2 class="effect__title">
+              Эффект на 24 часа!
             </h2>
-            <p class="features__item-text">
-              Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!
+            <p class="effect__text">
+              Британские ученые прочели исследования и доказали, что положительный эффект
+              <br>
+              от использования приложения длится целые сутки!
             </p>
+            <a href="#" class="effect__link">
+              Узнать больше об исследовании
+            </a>
           </div>
-          <div class="features__item">
-            <h2 class="features-item__title">
-              Меняет мир вокруг
-            </h2>
-            <p class="features__item-text">
-              Сделайте снимок и украсте его смайликом или текстовой подписью, чтобы услить эффект.
-            </p>
-          </div>
-          <div class="features-item">
-            <h2 class="features__item-title">
-              Заводит новых друзей
-            </h2>
-            <p class="features__item-text">
-              Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых.
-            </p>
-          </div>
-        </div>
-        <div class="features__desc">
-          <img src="#">
-          <h2 class="features__desc-title">
-            Эффект на 24 часа!
-          </h2>
-          <p class="features__desc-text">
-            Британские ученые прочели исследования и доказали, что положительный эффект от приложения длится целые сутки!
-          </p>
-          <a class="features__desc-link">
-            Узнать больше об исследовании
-          </a>
         </div>
       </div>
       <div class="reviews">
@@ -125,8 +138,11 @@
                 Николай Петров
               </cite>
               <p>
-                Это приложение перевернуло мой мир и позволило по-новому взглянуть на пивычные серые вещи! А ещё я познакомился со своей будущей женой в комментариях к выложенной фотографии!
+                «Это приложение перевернуло мой мир и позволило по-новому взглянуть на пивычные серые вещи! А ещё я познакомился со своей будущей женой в комментариях к выложенной фотографии!»
               </p>
+              <span class="reviews__authors-desc">
+                25 лет, водитель трамвая
+              </span>
             </blockquote>
             <button class="reviews__prev" type="button">Предыдущий отзыв</button>
             <button class="reviews__next" type="button">Следующий отзыв</button>
@@ -233,24 +249,30 @@
         <br>
           Свяжитесь с нами!
         </b>
-        <h3 class="contacts__title-phone">
-          Звоните!
-        </h3>
-        <span class="contacts__phone-number">
-          +7(812)5556666
-        </span>
-        <h3 class="contacts__title-e-mail">
-          Пишите!
-        </h3>
-        <span class="contacts__e-mail">
-          mail.htmlacademy.ru
-        </span>
-        <h3 class="contacts__title-adress">
-          Приезжайте в гости!
-        </h3>
-        <span class="contacts__adress">
-          ул. Большая Конюшеннная, 19/2
-        </span>
+        <div class="contacts__phone-wrapper">
+          <h3 class="contacts__title-phone">
+            Звоните!
+          </h3>
+          <span class="contacts__phone-number">
+            +7(812)5556666
+          </span>
+        </div>
+        <div class="contacts__e-mail-wrapper">
+          <h3 class="contacts__title-e-mail">
+            Пишите!
+          </h3>
+          <span class="contacts__e-mail">
+            mail.htmlacademy.ru
+          </span>
+        </div>
+        <div class="contacts__adress-wrapper">
+          <h3 class="contacts__title-adress">
+            Приезжайте в гости!
+          </h3>
+          <span class="contacts__adress">
+            ул. Большая Конюшеннная, 19/2
+          </span>
+        </div>
       </div>
       <div class="map">
       </div>
