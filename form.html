@@ -7,29 +7,32 @@
   </head>
   <body>
     <header class="page-header page-header--form">
+      <div class="page-header__wrapper page-header__wrapper--form">
         <nav class="main-nav main-nav--closed main-nav--no-js">
-          <div class="main-nav__logo">
-            <a>
-              <img src="img/logo-pink-white-mobile.svg">
-            </a>
-          </div>
-          <button class="main-nav__toggle" type="button">
-            Открыть меню
-          </button>
-          <div class="main-nav__wrapper">
+        <div class="main-nav__wrapper main-nav__wrapper--form">
+          <div class="main-nav__top-wrapper">
+            <div class="main-nav__logo">
+              <a href="index.html">
+                <img src="img/logo-pink-white-mobile.svg">
+              </a>
+            </div>
+            <button class="main-nav__toggle" type="button">
+              Открыть меню
+            </button>
+            </div>
             <ul class="main-nav__items">
-              <li class="main-nav__item main-nav__item--active">
+              <li class="main-nav__item">
                 <a href="index.html">
                   Главная
                 </a>
               </li>
               <li class="main-nav__item">
-                <a href="photo.html">
+                <a>
                   Фотографии
-                </a>
+                 </a>
               </li>
               <li class="main-nav__item">
-                <a>
+                <a href="form.html">
                   Конкурс
                 </a>
               </li>
@@ -41,14 +44,15 @@
             </ul>
           </div>
         </nav>
-        <div class="page-header__title title page-title--form">
-        <h1>
-          Конкурс на самое безбашенное путешествие с Пинк
-        </h1>
+        <div class="page-header__title page-header__title--form">
+          <h1>
+            Конкурс на самое безбашенное путешествие с Пинк
+          </h1>
+        </div>
       </div>
     </header>
+
     <main>
-      
       <div class="page-desc page-desc--form">
         <p class="page-desc__text page-desc__text--form">
           Поделитесь своей историей и получите шанс выиграть ценный приз - 1000 миль на вашу бонусную карту!
@@ -64,77 +68,94 @@
           <input id="patronymic" type="text" placeholder="Ну и отчество тоже">
         </div>
         <div class="progress-block">
-          <fieldset class="progress-form">
-            <legend>
-              Ваши безбашенные достижения в путешествии
-            </legend>
-            <input type="checkbox" id="selfie" checked>
-            <label for="selfie">
-              Сделал селфи с акулой
-            </label>
-            <input type="checkbox" id="beech" checked>
-            <label for="beech">
-              Обгорел на пляже
-            </label>
-            <input type="checkbox" id="norris" checked>
-            <label for="norris">
-              Видел Чака Норриса
-            </label>
-            <input type="checkbox" id="souvenirs">
-            <label for="souvenirs">
-              Накупил сувениров
-            </label>
-            <input type="checkbox" id="tower" checked>
-            <label for="tower">
-              Удержал башню
-            </label>
-            <input type="checkbox" id="hotel" checked>
-            <label for="hotel">
-              Разгромил отель
-            </label>
-          </fieldset>
+          <div class="progress-block__wrapper">
+            <fieldset class="progress-form">
+              <legend>
+                Ваши безбашенные достижения в путешествии
+              </legend>
+              <div class="progress-form__checkbox-wrapper">
+                <input type="checkbox" id="selfie" checked>
+                <label for="selfie">
+                  Сделал селфи с акулой
+                </label>
+                <input type="checkbox" id="beech" checked>
+                <label for="beech">
+                  Обгорел на пляже
+                </label>
+                <input type="checkbox" id="norris" checked>
+                <label for="norris">
+                  Видел Чака Норриса
+                </label>
+                <input type="checkbox" id="souvenirs">
+                <label for="souvenirs">
+                  Накупил сувениров
+                </label>
+                <input type="checkbox" id="tower" checked>
+                <label for="tower">
+                  Удержал башню
+                </label>
+                <input type="checkbox" id="hotel" checked>
+                <label for="hotel">
+                  Разгромил отель
+                </label>
+              </div>
+            </fieldset>
+          </div>
         </div>
         <div class="contacts-block">
-          <fieldset class="contacts-form">
-            <label for="tel">Номер телефона</label>
-            <input type="tel" name="tel" placeholder="Номер, пожалуйста">
-            <label for="e-mail">Адресок почты</label>
-            <input type="e-mail" name="e-mail" placeholder="Введите почту*" required>
-          </fieldset>
+          <div class="contacts-block__wrapper">
+            <fieldset class="contacts-form">
+              <legend>
+                Контактная информация
+              </legend>
+              <div class="contacts-form__info">
+                <label class="contacts-form__phone-title" for="tel">Номер телефона</label>
+                <input class="contacts-form__phone-input" type="tel" name="tel" placeholder="Номер, пожалуйста">
+                <label class="contacts-form__mail-title" for="e-mail">Адресок почты</label>
+                <input class="contacts-form__mail-input" type="e-mail" name="e-mail" placeholder="Введите почту*" required>
+              </div>
+            </fieldset>
+          </div>
         </div>
         <div class="app-block">
-          <fieldset class="app-form">
-            <legend>
-              C каким приложением путешествовали?
-            </legend>
-            <input type="radio" name="app" id="iOS" value="iOS" checked>
-            <label for="iOS">
-              Pink для iOS
-            </label>
-            <input type="radio" name="app" id="Android" value="Android">
-            <label for="Android">
-              Pink для Android
-            </label>
-            <input type="radio" name="app" id="windows" value="windows">
-            <label for="windows">
-              Windows Phone
-            </label>
-          </fieldset>
+          <div class="app-block__wrapper">
+            <fieldset class="app-form">
+              <legend>
+                C каким приложением путешествовали?
+              </legend>
+              <input type="radio" name="app" id="iOS" value="iOS" checked>
+              <label for="iOS">
+                Pink для iOS
+              </label>
+              <input type="radio" name="app" id="Android" value="Android">
+              <label for="Android">
+                Pink для Android
+              </label>
+              <input type="radio" name="app" id="windows" value="windows">
+              <label for="windows">
+                Windows Phone
+              </label>
+            </fieldset>
+          </div>
         </div>
         <div class="comment-block">
-          <fieldset class="comment-form">
-            <label for="emotion">
-              Опишите свои эмоции
-            </label>
-            <textarea name="emotion" rows="6" cols="20">Можно прям в красках, не стесняясь в выражениях</textarea>
-          </fieldset>
+          <div class="comment-block__wrapper">
+            <fieldset class="comment-form">
+              <legend>
+                Опишите свои эмоции
+              </legend>
+              <textarea name="emotion" rows="6" cols="20">Можно прям в красках, не стесняясь в выражениях</textarea>
+            </fieldset>
+          </div>
         </div>
-        <button type="submit" class="registration-form__button btn">
-          Отправить форму
-        </button>
-        <span class="registration-form__notice">
-          <sup>*</sup> — обязательные поля
-        </span>
+        <div class="send-block">
+          <button type="submit" class="send-block__button btn">
+            Отправить форму
+          </button>
+          <span class="send-block__notice">
+            <sup>*</sup> — обязательные <span class="send-block__hidden">для заполнения</span> поля
+          </span>
+        </div>
       </form>
     </main>
     <footer class="page-footer page-footer--form">
@@ -166,5 +187,21 @@
         </p>
       </div>
     </footer>
+    <script>
+      var navMain = document.querySelector('.main-nav');
+      var navToggle = document.querySelector('.main-nav__toggle');
+
+      navMain.classList.remove('main-nav--no-js');
+
+      navToggle.addEventListener('click', function() {
+        if (navMain.classList.contains('main-nav--closed')) {
+          navMain.classList.remove('main-nav--closed');
+          navMain.classList.add('main-nav--opened');
+        } else {
+          navMain.classList.add('main-nav--closed');
+          navMain.classList.remove('main-nav--opened');
+        }
+      });
+    </script>
   </body>
 </html>

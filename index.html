@@ -7,17 +7,18 @@
   </head>
   <body>
     <header class="page-header">
-      <div class="page-header__wrapper">
-        <nav class="main-nav main-nav--closed main-nav--no-js">
-          <div class="main-nav__logo">
-            <a>
-              <img src="img/logo-pink-white-mobile.svg">
-            </a>
-          </div>
-          <button class="main-nav__toggle" type="button">
-            Открыть меню
-          </button>
-          <div class="main-nav__wrapper">
+      <nav class="main-nav main-nav--closed main-nav--no-js">
+        <div class="main-nav__wrapper">
+          <div class="main-nav__top-wrapper">
+            <div class="main-nav__logo">
+              <a>
+                <img src="img/logo-pink-white-mobile.svg">
+              </a>
+            </div>
+            <button class="main-nav__toggle" type="button">
+              Открыть меню
+            </button>
+            </div>
             <ul class="main-nav__items">
               <li class="main-nav__item main-nav__item--active">
                 <a>
@@ -42,29 +43,36 @@
             </ul>
           </div>
         </nav>
-        <div class="page-header__hand-img">
-        </div>
-        <div class="desc-block">
-        <button class="btn desc-block__btn">
-          Скачать приложение
-        </button>
-        <div class="desc-block__icons">
-          <div class="desc-block__apple-icon">
+        <div class="page-header__info">
+          <div class="page-header__hand-img">
           </div>
-          <div class="desc-block__android-icon">
+          <div class="desc-block">
+            <div class="desc-block__wrapper">
+              <b class="desc-block__title">
+                Взгляните на жизнь иначе!
+              </b>
+              <button class="btn desc-block__btn">
+                Скачать приложение
+              </button>
+              <div class="desc-block__icons">
+                <div class="desc-block__apple-icon">
+                </div>
+                <div class="desc-block__android-icon">
+                </div>
+                <div class="desc-block__windows-icon">
+                </div>
+              </div>
+              <p class="desc-block__desc-text">
+                Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8
+              </p>
+            </div>
           </div>
-          <div class="desc-block__windows-icon">
-          </div>
-        </div>
-        <p class="desc-block__desc-text">
-          Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8
-        </p>
       </div>
       </div>
-      
+
     </header>
     <main>
-      
+
       <div class="slogan">
         <b class="slogan__text">
           Устали от серости мегаполиса?
@@ -106,7 +114,7 @@
               </p>
             </div>
           </div>
-          
+
         </div>
       </div>
       <div class="effect">
@@ -118,7 +126,6 @@
             </h2>
             <p class="effect__text">
               Британские ученые прочели исследования и доказали, что положительный эффект
-              <br>
               от использования приложения длится целые сутки!
             </p>
             <a href="#" class="effect__link">
@@ -128,6 +135,7 @@
         </div>
       </div>
       <div class="reviews">
+        <img src="#">
         <div class="reviews__wrapper slider">
           <input class="slider__input" type="radio" name="reviews" id="reviews-input-1">
           <input class="slider__input" type="radio" name="reviews" id="reviews-input-2">
@@ -138,15 +146,15 @@
                 Николай Петров
               </cite>
               <p>
-                «Это приложение перевернуло мой мир и позволило по-новому взглянуть на пивычные серые вещи! А ещё я познакомился со своей будущей женой в комментариях к выложенной фотографии!»
+                «Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А ещё я познакомился со своей будущей женой в комментариях к выложенной фотографии!»
               </p>
               <span class="reviews__authors-desc">
                 25 лет, водитель трамвая
               </span>
             </blockquote>
-            <button class="reviews__prev" type="button">Предыдущий отзыв</button>
-            <button class="reviews__next" type="button">Следующий отзыв</button>
           </div>
+          <button class="reviews__prev" type="button">Предыдущий отзыв</button>
+          <button href="#" class="reviews__next" type="button">Следующий отзыв</button>
           <div class="reviews__toggles slider__toggles">
             <label class="reviews__toggle" for="reviews-input-1">1</label>
             <label class="reviews__toggle" for="reviews-input-2">2</label>
@@ -277,21 +285,22 @@
       <div class="map">
       </div>
     </main>
-    <footer class="page-footer">
+    <footer class="page-footer page-footer--index">
       <div class="page-footer__wrapper">
         <div class="page-footer__logo">
           <a href="#">
+            <img src="../img/logo-pink-blue-mobile.svg">
           </a>
         </div>
         <p class="page-footer__social">
-          <span class="social-links">
-            <a  href="#" class="social-link social-link--tw">
+          <span class="page-footer__social-links">
+            <a  href="#" class="page-footer__social-link page-footer__social-link--tw">
               Мы в Твитер
             </a>
-            <a href="https://www.facebook.com/htmlacademy" class="social-link social-link--fb">
+            <a href="https://www.facebook.com/htmlacademy" class="page-footer__social-link page-footer__social-link--fb">
               Мы в Фейсбуке
             </a>
-            <a href="#" class="social-link social-link--yt">
+            <a href="#" class="page-footer__social-link page-footer__social-link--yt">
               Мы в Youtobe
             </a>
           </span>
@@ -300,9 +309,26 @@
           Разработано:
           <a class="btn page-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">
             HTML Academy
+            <img src="../img/logo-htmlacademy.svg">
           </a>
         </p>
       </div>
     </footer>
+   <script>
+    var navMain = document.querySelector('.main-nav');
+    var navToggle = document.querySelector('.main-nav__toggle');
+
+    navMain.classList.remove('main-nav--no-js');
+
+    navToggle.addEventListener('click', function() {
+      if (navMain.classList.contains('main-nav--closed')) {
+        navMain.classList.remove('main-nav--closed');
+        navMain.classList.add('main-nav--opened');
+      } else {
+        navMain.classList.add('main-nav--closed');
+        navMain.classList.remove('main-nav--opened');
+      }
+    });
+  </script>
   </body>
 </html>

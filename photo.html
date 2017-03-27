@@ -7,16 +7,19 @@
   </head>
   <body>
     <header class="page-header page-header--photo">
+      <div class="page-header__wrapper page-header__wrapper--photo">
         <nav class="main-nav main-nav--closed main-nav--no-js">
-          <div class="main-nav__logo">
-            <a>
-              <img src="img/logo-pink-white-mobile.svg">
-            </a>
-          </div>
-          <button class="main-nav__toggle" type="button">
-            Открыть меню
-          </button>
-          <div class="main-nav__wrapper">
+        <div class="main-nav__wrapper main-nav__wrapper--photo">
+          <div class="main-nav__top-wrapper">
+            <div class="main-nav__logo">
+              <a href="index.html">
+                <img src="img/logo-pink-white-mobile.svg">
+              </a>
+            </div>
+            <button class="main-nav__toggle" type="button">
+              Открыть меню
+            </button>
+            </div>
             <ul class="main-nav__items">
               <li class="main-nav__item main-nav__item--active">
                 <a href="index.html">
@@ -41,15 +44,14 @@
             </ul>
           </div>
         </nav>
-        <div class="page-header__title title page-title--photo">
-        <h1>
-          Фотографии пользователей
-        </h1>
+        <div class="page-header__title page-header__title--photo">
+          <h1>
+            Фотографии пользователей
+          </h1>
+        </div>
       </div>
     </header>
-
     <main>
-      
       <div class="page-desc page-desc--photo">
         <p class="page-desc__text page-desc__text--photo">
           Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?
@@ -232,34 +234,38 @@
         </p>
       </div>
       <div class="photo-editor">
-        <div class="photo-editor__img">
-          <img src="../img/photo-7-mobile@1x.jpg">
-        </div>
-        <div class="photo-editor__edit-block">
-          <div class="photo-editor__edit-buttons">
-            <button class="photo-editor__edit-button photo-editor__edit-button--crop">
-              <img src="#">
+        <div class="photo-editor__wrapper">
+          <div class="photo-editor__img">
+            <img src="../img/photo-7-mobile@1x.jpg">
+          </div>
+          <div class="photo-editor__edit-block">
+            <div class="photo-editor__edit-buttons">
+              <button class="photo-editor__edit-button photo-editor__edit-button--crop">
+                <img src="#">
+              </button>
+              <button class="photo-editor__edit-button photo-editor__edit-button--fill">
+                <img src="#">
+              </button>
+              <button class="photo-editor__edit-button photo-editor__edit-button--contrast">
+                <img src="#">
+              </button>
+              <div class="photo-editor__scale">
+            </div>
+            </div>
+
+            <div class="photo-editor__post-buttons">
+            <button class="photo-editor__post-button photo-editor__post-button--post">
+              Запостить
             </button>
-            <button class="photo-editor__edit-button photo-editor__edit-button--fill">
-              <img src="#">
-            </button>
-            <button class="photo-editor__edit-button photo-editor__edit-button--contrast">
-              <img src="#">
+            <button class="photo-editor__post-button photo-editor__post-button--cancel">
+              Отмена
             </button>
           </div>
-          <div class="photo-editor__scale">
           </div>
-        </div>
-        <div class="photo-editor__post-buttons">
-          <button class="photo-editor__post-button photo-editor__post-button--post">
-            Запостить
-          </button>
-          <button class="photo-editor__post-button photo-editor__post-button--cancel"> 
-            Отмена
-          </button>
+
         </div>
       </div>
-    </main>    
+    </main>
     <footer class="page-footer page-footer--photo">
       <div class="page-footer__wrapper">
         <div class="page-footer__logo">
@@ -289,5 +295,21 @@
         </p>
       </div>
     </footer>
+    <script>
+    var navMain = document.querySelector('.main-nav');
+    var navToggle = document.querySelector('.main-nav__toggle');
+
+    navMain.classList.remove('main-nav--no-js');
+
+    navToggle.addEventListener('click', function() {
+      if (navMain.classList.contains('main-nav--closed')) {
+        navMain.classList.remove('main-nav--closed');
+        navMain.classList.add('main-nav--opened');
+      } else {
+        navMain.classList.add('main-nav--closed');
+        navMain.classList.remove('main-nav--opened');
+      }
+    });
+  </script>
   </body>
 </html>
